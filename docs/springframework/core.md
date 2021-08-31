@@ -129,3 +129,19 @@
 > 
 > 在Spring容器中使用其他类型的元数据信息，请看：
 
+> `原文：`
+>
+> - Annotation-based configuration: Spring 2.5 introduced support for annotation-based configuration metadata.
+>
+> `翻译: `
+>
+> - 基于注解的配置：Spring 2.5 引入了基于注解配置元数据的支持
+
+> `原文：`
+>
+> - Java-based configuration: Starting with Spring 3.0, many features provided by the Spring JavaConfig project became part of the core Spring Framework. Thus, you can define beans external to your application classes by using Java rather than XML files. To use these new features, see the [@Configuration](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html), [@Bean](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html), [@Import](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html), and [@DependsOn](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html) annotations.
+>
+> `翻译：`
+>
+> - 基于Java的配置：从Spring 3.0开始，提供了许多特性的Spring JavaConfig成为了Spring Framework核心的一部分。因此，你可以通过Java类而不是XML文件来为你的应用定义外部的bean。为了使用这些新特性，请看@Configuration, @Bean, @Import和@DependsOn注解
+
