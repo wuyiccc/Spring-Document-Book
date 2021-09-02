@@ -145,3 +145,30 @@
 >
 > - 基于Java的配置：从Spring 3.0开始，提供了许多特性的Spring JavaConfig成为了Spring Framework核心的一部分。因此，你可以通过Java类而不是XML文件来为你的应用定义外部的bean。为了使用这些新特性，请看@Configuration, @Bean, @Import和@DependsOn注解
 
+> `原文：`
+>
+> Spring configuration consists of at least one and typically more than one bean definition that the container must manage. XML-based configuration metadata configures these beans as <bean/> elements inside a top-level <beans/> element. Java configuration typically uses @Bean-annotated methods within a @Configuration class.
+>
+> `翻译：`
+>
+> Spring的配置包括至少一个, 通常是一个以上的Bean定义, 容器必须管理这些定义。基于XML配置的元数据配置将这些Bean配置为顶层<bean></bean>标签内的元素。基于Java的配置通常是在被@Configuration注解的类中来使用@Bean来注解方法。
+
+**例如：**
+```java
+@Configuration
+public class BeanConfiguration {
+    
+    @Bean
+    public Person person() {
+        return new Person();
+    }
+}
+```
+
+> `原文：`
+>
+> These bean definitions correspond to the actual objects that make up your application. Typically, you define service layer objects, data access objects (DAOs), presentation objects such as Struts Action instances, infrastructure objects such as Hibernate SessionFactories, JMS Queues, and so forth. Typically, one does not configure fine-grained domain objects in the container, because it is usually the responsibility of DAOs and business logic to create and load domain objects. However, you can use Spring’s integration with AspectJ to configure objects that have been created outside the control of an IoC container. See [Using AspectJ to dependency-inject domain objects with Spring](https://docs.spring.io/spring-framework/docs/5.3.8/reference/html/core.html#aop-atconfigurable).
+>
+> `翻译：`
+>
+> 这些Bean定义对应于构成你的应用程序的实际对象。通常，你会定义服务层对象，数据访问层对象(DAOs), 表现层对象(例如Structs Action实例)，基础设施对象(例如Hibernate SessionFactories, JMS队列等等)。通常情况下，程序员不会在容器中配置细粒度的域对象, 因为创建和加载域对象通常是DAOs和业务逻辑的任务。但是，你可以使用Spring集成的AspectJ来配置哪些在IoC容器控制之外创建的对象。请看使用AspectJ和Spring进行依赖注入域对象。
