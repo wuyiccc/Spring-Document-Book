@@ -172,3 +172,42 @@ public class BeanConfiguration {
 > `翻译：`
 >
 > 这些Bean定义对应于构成你的应用程序的实际对象。通常，你会定义服务层对象，数据访问层对象(DAOs), 表现层对象(例如Structs Action实例)，基础设施对象(例如Hibernate SessionFactories, JMS队列等等)。通常情况下，程序员不会在容器中配置细粒度的域对象, 因为创建和加载域对象通常是DAOs和业务逻辑的任务。但是，你可以使用Spring集成的AspectJ来配置哪些在IoC容器控制之外创建的对象。请看使用AspectJ和Spring进行依赖注入域对象。
+
+> `原文：`
+>
+> The following example shows the basic structure of XML-based configuration metadata:
+>
+> `翻译：`
+>
+> 以下示例展示了基于XML配置元数据的基本模板
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="..." class="...">  
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+    <bean id="..." class="...">
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
+```
+
+> `原文：`
+>
+> 1. The id attribute is a string that identifies the individual bean definition.
+> 2. The class attribute defines the type of the bean and uses the fully qualified
+     classname.
+>
+> `翻译：`
+>
+> 1. id的属性值是一个字符串, 它是一个Bean定义的唯一标识符
+> 2. class使用完全限定名定义了Bean的类型
